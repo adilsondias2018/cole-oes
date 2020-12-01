@@ -1,0 +1,8 @@
+.Pokemon-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
+img {
+  width: 100px;
+}

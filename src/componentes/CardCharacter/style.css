@@ -1,0 +1,10 @@
+.Card-character {
+  padding: 3px;
+  font-size: 12px;
+  color: #999;
+  background-color: white;
+}
+
+img {
+  width: 100px;
+}
