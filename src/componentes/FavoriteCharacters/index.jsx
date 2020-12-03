@@ -1,14 +1,25 @@
-import Card from "../CardCharacter";
-const FavoriteCharcters = ({ favorites }) => {
+import "antd/dist/antd.css";
+import { Card } from "antd";
+import CardCharacter from "../CardCharacter";
+
+const FavoriteCharcters = ({ favorites, setFavorites }) => {
+  const gridStyle = {
+    width: "25%",
+    textAlign: "center",
+  };
+
   return (
-    <div>
-      <h2>Page Favorites</h2>
-      <div>
-        {favorites.map((character, index) => (
-          <Card key={index} character={character} />
-        ))}
-      </div>
-    </div>
+    <Card title="Personagnes Favoritos Rick e Morty">
+      {favorites.map((character, index) => (
+        <CardCharacter
+          key={index}
+          character={character}
+          favorites={favorites}
+          setFavorites={setFavorites}
+          isRemovable
+        />
+      ))}
+    </Card>
   );
 };
 

@@ -10,18 +10,20 @@ const PokemonCard = ({ pokemon }) => {
   const id = baseUrl["6"];
   console.log("base Url", baseUrl);
   console.log("id", id);
+  const gridStyle = {
+    width: "25%",
+    textAlign: "center",
+  };
   return (
-    <div className="Pokemon-card">
-      <Card>
-        <div>{pokemon.name}</div>
-        <img
-          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
-        />
-        <div>
-          <Button type="primary">Add favorite</Button>
-        </div>
-      </Card>
-    </div>
+    <Card.Grid style={gridStyle}>
+      <div>{pokemon.name}</div>
+      <img
+        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+      />
+      <div>
+        <Button type="primary">Add favorite</Button>
+      </div>
+    </Card.Grid>
   );
 };
 

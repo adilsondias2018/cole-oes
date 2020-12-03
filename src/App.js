@@ -67,8 +67,8 @@ function App() {
   useEffect(getCharacters, []);
   useEffect(getPokemons, []);
 
-  useEffect(nextPage, []);
-  useEffect(prevPage, []);
+  // useEffect(nextPage, []);
+  // useEffect(prevPage, []);
 
   return (
     <div className="App">
@@ -89,6 +89,8 @@ function App() {
               favorites={favorites}
               setFavorites={setFavorites}
               number={number}
+              getCharacters={getCharacters}
+              setNumber={setNumber}
             />
           </Route>
           <Route exact path="/rick-morty">
@@ -101,7 +103,10 @@ function App() {
             />
           </Route>
           <Route path="/favorite-rickmorty">
-            <FavoritesCharacters favorites={favorites} />
+            <FavoritesCharacters
+              favorites={favorites}
+              setFavorites={setFavorites}
+            />
           </Route>
           <Route path="/pokemons">
             <PokemonsList

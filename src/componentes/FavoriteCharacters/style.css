@@ -2,14 +2,5 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-}
-
-.Name-Character {
-  width: 150px;
   font-size: 10px;
-}
-
-img {
-  width: 200px;
-  border-radius: 5px;
 }
